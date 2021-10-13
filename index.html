@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Color</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!--the heading text-->
+    <header>
+        <h1>Color <span class="color">Color</span> On The Wall</h1>
+        <h3>...who's the prettiest one of all?</h3>
+    </header>
+    <main>
+        <!--the whole input in a box-->
+        <div id="input-wrapper">
+            <!--the color picker-->
+            <label for="common">Choose Me!</label>
+            <input type="color" name="common" id="color-picker" class="controls">
+            <!--the name to be typed-->
+            <input type="text" name="name" id="name" placeholder="Your Name" class="">
+
+
+            <!--wrapped in a wrapper-->
+            <div id="range-wrapper">
+                <!--blur to be applied-->
+                <label for="blur">BLUR</label>
+                <input type="range" name="blur" id="blur" min="0" max="20" class="controls" data-sizing="px"><br>
+                <!--the padding/border to be given-->
+                <label for="padding">BORDER</label>
+                <input type="range" name="padding" id="padding" min="10" max="200" class="controls" data-sizing="px">
+
+
+
+
+            </div>
+        </div>
+        <!--the box containing image-->
+        <section id="last-box">
+            <span class="material-icons" id="left">navigate_next</span>
+            <div class="image-box">
+                <img src="pic-1.jpg" alt="image" id="image">
+            </div>
+            <span class="material-icons" id="right">navigate_next</span>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

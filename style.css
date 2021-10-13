@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
+*,*::after,*::before{
+    padding: 0%;
+    margin: 0%;
+}
+:root{
+    --common:blue;
+    --blur:2px;
+    --padding:10px;
+}
+
+/*the mobile version*/
+
+body{
+    display: flex;
+    height: 110vh;
+    font-family: 'Noto Sans Display', sans-serif;
+    flex-direction: column;
+    background-color: #BC986A
+}
+header{
+    margin: 1.5rem 2rem;
+    line-height: 2.5rem;
+    text-align: center;
+    margin-bottom:0;
+}
+h3{
+    font-weight: 300;
+}
+
+#input-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 2rem;
+    padding-top: 1rem;
+    line-height: 2rem;
+    gap: 0.4rem;
+    margin: auto;
+}
+#color-picker{
+    width: 50%;
+    margin: auto;
+}
+
+input[type=text],input[type=text]:focus{
+    width: auto;
+    height: 1.5rem;
+    margin: auto;
+    margin-top: 0.2rem;
+    border: 0;
+    background:transparent;
+    color: var(--common);
+}
+#range-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+input[type="range"]{
+    height: 30%;
+    color: black;
+    outline: none;
+    -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: var(--common);
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: black;
+    margin-top: -4px;
+}
+
+#last-box{
+    display: flex;
+}
+
+.color{
+    color: var(--common);
+}
+.image-box{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: var(--common);
+    padding: var(--padding);
+    max-width: 15rem;
+    flex-shrink: 5;
+    filter: blur(var(--blur));
+
+}
+.material-icons{
+    align-self: center;
+    margin: 1rem;
+    
+}
+#last-box span{
+    cursor: pointer;
+}
+#left{
+    transform: rotate(180deg);
+}
+img{
+    width: 90%;
+}
+
+@media (min-width:801px){
+    #color-picker{
+        width: 20%;
+    }
+    input[type="range"]{
+        width: 20%;
+        margin: auto;
+    }
+    label{
+        margin: auto;
+    }
+    input[type=text]{
+        margin: auto;
+        width: 5%;
+    }
+    .material-icons{
+        flex-grow: 3;
+        font-size: 10px;
+    }
+    img{
+        width: 100%;
+    }
+}
